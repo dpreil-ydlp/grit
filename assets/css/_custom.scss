@@ -14,6 +14,77 @@
   --font-body: 'Inter', sans-serif;
 }
 
+// Apply fonts globally
+body {
+  font-family: var(--font-body) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+}
+
+// Improve content spacing and readability
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  line-height: 1.7;
+  
+  h1, h2, h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  ul {
+    margin-bottom: 1.5rem;
+    
+    li {
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// Style CTAs and links
+a[href="/contact/"], a[href="/services/"] {
+  color: var(--primary-color) !important;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  display: inline-block;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: var(--primary-color);
+    color: white !important;
+    transform: translateY(-2px);
+  }
+}
+
 // Import Google Fonts
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
