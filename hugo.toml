@@ -5,7 +5,7 @@
 baseURL = "https://gritgrowthops.com"
 languageCode = "en-us"
 title = "Grit GrowthOps - Scale Your Startup with Operational Excellence"
-theme = "LoveIt"
+# theme = "LoveIt"
 enableGitInfo = false
 enableEmoji = true
 enableRobotsTXT = true

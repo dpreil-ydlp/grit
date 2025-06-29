@@ -1,9 +1,34 @@
 {{- $params := .Scratch.Get "params" -}}
 
 <meta name="Description" content="{{ $params.description | default .Site.Params.description }}">
+<meta name="keywords" content="{{ if .Params.keywords }}{{ delimit .Params.keywords ", " }}{{ else }}startup operations, operational consulting, founder coaching, startup scaling, hybrid teams, AI automation, GRIT framework{{ end }}">
+<meta name="author" content="{{ .Site.Params.author.name }}">
 
-{{- template "_internal/opengraph.html" . -}}
-{{- template "_internal/twitter_cards.html" . -}}
+{{- /* Enhanced Open Graph Tags */ -}}
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
+<meta property="og:description" content="{{ $params.description | default .Site.Params.description }}">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="en_US">
+{{- if .Site.Params.images -}}
+    <meta property="og:image" content="{{ index .Site.Params.images 0 | absURL }}">
+{{- end -}}
+
+{{- /* Twitter Card Tags */ -}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}">
+<meta name="twitter:description" content="{{ $params.description | default .Site.Params.description }}">
+{{- if .Site.Params.images -}}
+    <meta name="twitter:image" content="{{ index .Site.Params.images 0 | absURL }}">
+{{- end -}}
+
+{{- /* Additional Meta Tags */ -}}
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<meta name="revisit-after" content="7 days">
+<meta name="rating" content="general">
+<link rel="canonical" href="{{ .Permalink }}">
 
 <meta name="application-name" content="{{ .Site.Params.app.title | default .Site.Title }}">
 <meta name="apple-mobile-web-app-title" content="{{ .Site.Params.app.title | default .Site.Title }}">

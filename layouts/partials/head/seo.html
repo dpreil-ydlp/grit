@@ -62,6 +62,39 @@
     }
     </script>
 
+    {{- /* Business Organization Schema */ -}}
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Grit GrowthOps",
+        "url": "{{ .Site.BaseURL }}",
+        "logo": "{{ .Site.BaseURL }}/images/logo.png",
+        "description": "Operational consulting firm helping first-time founders with 2-4 employees scale efficiently through the GRIT Framework",
+        "slogan": "Scale Your Grit",
+        "founder": {
+            "@type": "Person",
+            "name": "David Preil"
+        },
+        "serviceType": "Operational Consulting",
+        "areaServed": "United States",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "",
+            "contactType": "customer service",
+            "email": "david@gritgrowthops.com",
+            "availableLanguage": "English"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US"
+        },
+        "sameAs": [
+            "https://gritgrowthops.com"
+        ]
+    }
+    </script>
+
 {{- /* Page SEO */ -}}
 {{- else if .IsPage -}}
     <script type="application/ld+json">
