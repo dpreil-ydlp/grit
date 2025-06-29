@@ -1,4 +1,260 @@
-// ==============================
-// Custom style
-// 自定义样式
-// ==============================
+// Grit GrowthOps Custom Styles
+
+// CSS Variables for Brand Colors
+:root {
+  --primary-color: #FF6B35;
+  --primary-dark: #E55A2B;
+  --secondary-color: #2C3E50;
+  --text-dark: #2C3E50;
+  --text-light: #7F8C8D;
+  --background-light: #ECF0F1;
+  --white: #FFFFFF;
+  
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+// Override LoveIt theme defaults
+.header-wrapper .header-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.menu .menu-item .menu-link {
+  font-weight: 500;
+  
+  &:hover {
+    color: var(--primary-color);
+  }
+}
+
+// CTA Button Styling
+.cta-button {
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: var(--font-body);
+  
+  &:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+    color: white;
+    text-decoration: none;
+  }
+}
+
+// Form Styling
+form input, 
+form select, 
+form textarea {
+  border: 2px solid var(--background-light);
+  padding: 12px 15px;
+  width: 100%;
+  transition: border-color 0.3s ease;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  
+  &:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+  }
+}
+
+form label {
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  display: block;
+}
+
+// Typography Overrides
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-dark);
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+// Link styling
+a {
+  color: var(--primary-color);
+  
+  &:hover {
+    color: var(--primary-dark);
+  }
+}
+
+// Section spacing
+.section {
+  padding: 60px 20px;
+}
+
+// Home page profile customization
+.home .profile {
+  .profile-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+  
+  .profile-subtitle {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+}
+
+// Footer customization
+.footer {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  strong {
+    color: var(--primary-color);
+  }
+}
+
+// Mobile responsiveness
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 15px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  .cta-button {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
+}
+
+// Page content styling
+.page .single-title {
+  font-family: var(--font-heading);
+  color: var(--text-dark);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.page .single-subtitle {
+  color: var(--text-light);
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+// Menu hover effects
+.menu .menu-item {
+  position: relative;
+  
+  &:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background-color: var(--primary-color);
+  }
+}
+
+// Smooth scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Content max-width
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Table styling (if needed)
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+  
+  th, td {
+    border: 1px solid var(--background-light);
+    padding: 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: var(--background-light);
+    font-weight: 600;
+    color: var(--text-dark);
+  }
+}
+
+// Blockquote styling
+blockquote {
+  border-left: 4px solid var(--primary-color);
+  padding-left: 20px;
+  margin: 20px 0;
+  font-style: italic;
+  color: var(--text-light);
+}
+
+// Code styling
+code {
+  background-color: var(--background-light);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  color: var(--text-dark);
+}
+
+pre {
+  background-color: var(--background-light);
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  
+  code {
+    background: none;
+    padding: 0;
+  }
+}

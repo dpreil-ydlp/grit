@@ -1,0 +1,7 @@
+# Netlify redirects for Grit GrowthOps
+
+# Form submissions
+/contact-success /contact 200
+
+# Fallback for any 404s to homepage
+/* / 404

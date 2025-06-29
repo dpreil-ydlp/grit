@@ -1,29 +1,65 @@
 [build]
-  publish = "exampleSite/public"
+  publish = "public"
+  command = "hugo --gc --minify"
 
-    [build.environment]
-      HUGO_VERSION = "0.145.0"
-      HUGO_ENV = "production"
-      HUGO_ENABLEGITINFO = "true"
+[build.environment]
+  HUGO_VERSION = "0.128.0"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
 
-[context.production]
-  command = "hugo --source exampleSite --theme repo --themesDir ../.. --baseURL ${URL} --gc --minify"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+
+[context.production.environment]
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
+
+[context.split1]
+  command = "hugo --gc --minify --enableGitInfo"
+
+[context.split1.environment]
+  HUGO_ENV = "production"
 
 [context.deploy-preview]
-  command = "hugo --source exampleSite --theme repo --themesDir ../.. --baseURL ${DEPLOY_PRIME_URL} --gc --minify --buildDrafts"
+  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+  HUGO_VERSION = "0.128.0"
 
 [context.branch-deploy]
-  command = "hugo --source exampleSite --theme repo --themesDir ../.. --baseURL ${DEPLOY_PRIME_URL} --gc --minify"
+  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
-[[plugins]]
-  package = "netlify-plugin-hugo-cache-resources"
+[context.branch-deploy.environment]
+  HUGO_VERSION = "0.128.0"
 
-  [plugins.inputs]
-    debug = true
-    srcdir = "exampleSite"
+# Forms
+[[forms]]
+  name = "growthops-contact"
 
-[[plugins]]
-  package = "@netlify/plugin-lighthouse"
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; script-src 'self'; img-src 'self' data:; connect-src 'self'"
 
-  [plugins.inputs.settings]
-    preset = "desktop"
+# Cache static assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"

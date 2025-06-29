@@ -2,37 +2,59 @@
   [module.hugoVersion]
     min = "0.128.0"
 
+baseURL = "https://gritgrowthops.com"
+languageCode = "en-us"
+title = "Grit GrowthOps - Scale Your Startup with Operational Excellence"
+theme = "LoveIt"
+enableGitInfo = false
+enableEmoji = true
+enableRobotsTXT = true
+canonifyURLs = true
+
+# Menu configuration
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 10
+  [[menu.main]]
+    identifier = "services"
+    name = "Services"
+    url = "/services/"
+    weight = 20
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 30
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 40
+
 [params]
   # site default theme ["auto", "light", "dark"]
-  # 网站默认主题 ["auto", "light", "dark"]
-  defaultTheme = "auto"
+  defaultTheme = "light"
   # public git repo url only then enableGitInfo is true
-  # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
   gitRepo = ""
   # which hash function used for SRI, when empty, no SRI is used
-  # ["sha256", "sha384", "sha512", "md5"]
-  # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI
-  # ["sha256", "sha384", "sha512", "md5"]
   fingerprint = ""
   # date format
-  # 日期格式
   dateFormat = "2006-01-02"
   # website title for Open Graph and Twitter Cards
-  # 网站标题, 用于 Open Graph 和 Twitter Cards
-  title = "My cool site"
+  title = "Grit GrowthOps - Scale Your Startup with Operational Excellence"
   # website description for RSS, SEO, Open Graph and Twitter Cards
-  # 网站描述, 用于 RSS, SEO, Open Graph 和 Twitter Cards
-  description = "This is my cool site"
+  description = "Transform from overwhelmed founder to strategic CEO. Grit GrowthOps helps founders with 2-4 employees build lightweight operations and hybrid AI-human teams through the proven GRIT Framework."
   # website images for Open Graph and Twitter Cards
-  # 网站图片, 用于 Open Graph 和 Twitter Cards
   images = []
 
   # Author config
-  # 作者配置
   [params.author]
-    name = "xxxx"
-    email = ""
-    link = ""
+    name = "David Preil"
+    email = "hello@gritgrowthops.com"
+    link = "https://gritgrowthops.com"
 
   # Header config
   # 页面头部导航栏配置
@@ -47,45 +69,32 @@
     # 页面头部导航栏标题配置
     [params.header.title]
       # URL of the LOGO
-      # LOGO 的 URL
       logo = ""
       # title name
-      # 标题名称
-      name = "My cool site"
+      name = "Grit GrowthOps"
       # you can add extra information before the name (HTML format is supported), such as icons
-      # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       pre = ""
       # you can add extra information after the name (HTML format is supported), such as icons
-      # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
       post = ""
       # whether to use typeit animation for title name
-      # 是否为标题显示打字机动画
       typeit = false
 
   # Footer config
-  # 页面底部信息配置
   [params.footer]
     enable = true
     # Custom content (HTML format is supported)
-    # 自定义内容 (支持 HTML 格式)
-    custom = ""
+    custom = "<p><strong>Scale Your Grit</strong> - Operational Excellence for Growing Founders</p>"
     # whether to show Hugo and theme info
-    # 是否显示 Hugo 和主题信息
-    hugo = true
+    hugo = false
     # whether to show copyright info
-    # 是否显示版权信息
     copyright = true
     # whether to show the author
-    # 是否显示作者
     author = true
     # site creation time
-    # 网站创立年份
-    since = 2022
+    since = 2025
     # ICP info only in China (HTML format is supported)
-    # ICP 备案信息，仅在中国使用 (支持 HTML 格式)
     icp = ""
     # license info (HTML format is supported)
-    # 许可协议信息 (支持 HTML 格式)
     license= ""
 
   # Section (all posts) page config
@@ -115,26 +124,19 @@
     rss = 10
 
   # App icon config
-  # 应用图标配置
   [params.app]
     # optional site title override for the app when added to an iOS home screen or Android launcher
-    # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
-    title = "My cool site"
+    title = "Grit GrowthOps"
     # whether to omit favicon resource links
-    # 是否隐藏网站图标资源链接
     noFavicon = false
     # modern SVG favicon to use in place of older style .png and .ico files
-    # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
     svgFavicon = ""
     # Android browser theme color
-    # Android 浏览器主题色
-    themeColor = "#ffffff"
+    themeColor = "#FF6B35"
     # Safari mask icon color
-    # Safari 图标颜色
-    iconColor = "#5bbad5"
+    iconColor = "#FF6B35"
     # Windows v8-11 tile color
-    # Windows v8-11 磁贴颜色
-    tileColor = "#da532c"
+    tileColor = "#FF6B35"
 
   # Search config
   # 搜索配置
@@ -167,42 +169,30 @@
       searchKey = ""
 
   # Home page config
-  # 主页信息设置
   [params.home]
     # amount of RSS pages
-    # RSS 文章数目
     rss = 10
     # Home page profile
-    # 主页个人信息
     [params.home.profile]
       enable = true
       # Gravatar Email for preferred avatar in home page
-      # Gravatar 邮箱，用于优先在主页显示的头像
       gravatarEmail = ""
       # URL of avatar shown in home page
-      # 主页显示头像的 URL
       avatarURL = ""
       # title shown in home page (HTML format is supported)
-      # 主页显示的网站标题 (支持 HTML 格式)
-      title = ""
+      title = "Stop Drowning in Operations. Start Scaling Your Business."
       # subtitle shown in home page (HTML format is supported)
-      # 主页显示的网站副标题 (允许 HTML 格式)
-      subtitle = "This is my cool site"
+      subtitle = "Transform from overwhelmed founder to strategic CEO with the <strong>GRIT Framework</strong><br>For first-time founders with 2-4 employees ready to build operational excellence"
       # whether to use typeit animation for subtitle
-      # 是否为副标题显示打字机动画
-      typeit = true
+      typeit = false
       # whether to show social links
-      # 是否显示社交账号
-      social = true
+      social = false
       # disclaimer (HTML format is supported)
-      # 免责声明 (支持 HTML 格式)
       disclaimer = ""
     # Home page posts
-    # 主页文章列表
     [params.home.posts]
-      enable = true
+      enable = false
       # special amount of posts in each home posts page
-      # 主页每页显示文章数量
       paginate = 6
   # Social config in home page
   # 主页的社交信息设置
