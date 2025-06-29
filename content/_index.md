@@ -72,24 +72,23 @@ That's when I discovered how to apply enterprise-level operational strategies to
 
 *Successfully scaled alternative investment platform • Applied enterprise methods to small teams*
 
----
+<div class="section section-accent">
+  <div class="container-narrow" style="text-align: center;">
+    <h2 style="margin-bottom: var(--space-md);">Ready to Scale Your Grit?</h2>
+    <p style="font-size: var(--text-h4); color: var(--grit-gray-cool); margin-bottom: var(--space-xl);">
+      Transform from overwhelmed founder to strategic CEO with operational excellence that matches your ambition.
+    </p>
+    
+    <a href="/contact/" class="btn-primary" style="font-size: var(--text-h4); padding: var(--space-lg) var(--space-2xl);">
+      Get Your Growth Roadmap
+      <span class="arrow-right"></span>
+    </a>
+    
+    <p style="margin-top: var(--space-md); font-style: italic; color: var(--grit-gray-cool);">
+      For first-time founders with 2-4 employees ready to build sustainable growth
+    </p>
+  </div>
+</div>
 
-<center>
-
-## Ready to Scale Your Grit?
-
-Transform from overwhelmed founder to strategic CEO with operational excellence that matches your ambition.
-
-### [Get Your Growth Roadmap →](/contact/)
-
-*For first-time founders with 2-4 employees ready to build sustainable growth*
-
-</center>
-
----
-
-<center>
-
-**Scale Your Grit** - *Operational Excellence for Growing Founders*
-
-</center>
+<div class="pattern-dots" style="top: 10%; right: 10%;"></div>
+<div class="pattern-dots" style="bottom: 20%; left: 5%;"></div>
