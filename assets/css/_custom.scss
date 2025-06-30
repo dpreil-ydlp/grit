@@ -141,7 +141,7 @@ body > .wrapper,
   opacity: 1 !important;
 }
 
-// CLEAN NAVIGATION DESIGN - FORCE TO TOP
+// CLEAN NAVIGATION DESIGN - STICKY TO TOP
 #header-desktop {
   background: rgba(44, 62, 80, 0.95) !important;
   backdrop-filter: blur(10px) !important;
@@ -149,7 +149,8 @@ body > .wrapper,
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
   height: 70px !important;
   line-height: 70px !important;
-  position: fixed !important;
+  position: sticky !important;
+  position: -webkit-sticky !important;
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
@@ -166,7 +167,8 @@ body > .wrapper,
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
   height: 70px !important;
   line-height: 70px !important;
-  position: fixed !important;
+  position: sticky !important;
+  position: -webkit-sticky !important;
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
@@ -245,7 +247,7 @@ body > .wrapper,
   opacity: 1 !important;
 }
 
-// OVERRIDE THEME MENU STYLES COMPLETELY
+// COMPLETELY RESET AND OVERRIDE ALL MENU STYLES
 .menu .menu-item,
 .menu a,
 #header-desktop .menu .menu-item,
@@ -254,17 +256,26 @@ body > .wrapper,
 #header-mobile .menu a,
 .header-wrapper .menu .menu-item,
 .header-wrapper .menu a {
+  // Reset all inherited styles
   color: rgba(255, 255, 255, 0.9) !important;
   font-family: 'Inter', sans-serif !important;
   font-weight: 500 !important;
   font-size: 0.95rem !important;
   padding: 10px 16px !important;
   margin: 0 4px !important;
-  border-radius: 6px !important;
+  border-radius: 0 !important;
   transition: all 0.2s ease !important;
   text-decoration: none !important;
   background: transparent !important;
+  background-color: transparent !important;
   border: none !important;
+  border-bottom: none !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
   white-space: nowrap !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -280,7 +291,26 @@ body > .wrapper,
   box-sizing: border-box !important;
 }
 
-// OVERRIDE THEME MENU HOVER STYLES COMPLETELY
+// Remove any pseudo-elements that might create underlines or borders
+.menu .menu-item::before,
+.menu .menu-item::after,
+.menu a::before,
+.menu a::after,
+#header-desktop .menu .menu-item::before,
+#header-desktop .menu .menu-item::after,
+#header-desktop .menu a::before,
+#header-desktop .menu a::after,
+.header-wrapper .menu .menu-item::before,
+.header-wrapper .menu .menu-item::after,
+.header-wrapper .menu a::before,
+.header-wrapper .menu a::after {
+  display: none !important;
+  content: none !important;
+  border: none !important;
+  background: none !important;
+}
+
+// CONSISTENT HOVER STATES - NO BACKGROUND, JUST COLOR CHANGE
 .menu .menu-item:hover,
 .menu a:hover,
 #header-desktop .menu .menu-item:hover,
@@ -289,14 +319,18 @@ body > .wrapper,
 #header-mobile .menu a:hover,
 .header-wrapper .menu .menu-item:hover,
 .header-wrapper .menu a:hover {
-  color: #FFFFFF !important;
-  background: #FF6B35 !important;
+  color: #FF6B35 !important;
+  background: transparent !important;
+  background-color: transparent !important;
   text-decoration: none !important;
   transform: none !important;
   box-shadow: none !important;
+  border: none !important;
+  border-bottom: none !important;
+  outline: none !important;
 }
 
-// ACTIVE STATE (current page) styling
+// ACTIVE STATE (current page) styling - ORANGE TEXT ONLY
 .menu .menu-item.active,
 .menu a.active,
 #header-desktop .menu .menu-item.active,
@@ -305,10 +339,28 @@ body > .wrapper,
 #header-mobile .menu a.active,
 .header-wrapper .menu .menu-item.active,
 .header-wrapper .menu a.active {
-  color: #FFFFFF !important;
-  background: #FF6B35 !important;
+  color: #FF6B35 !important;
+  background: transparent !important;
+  background-color: transparent !important;
   text-decoration: none !important;
   transform: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-bottom: none !important;
+  outline: none !important;
+}
+
+// Remove any focus states that might add styling
+.menu .menu-item:focus,
+.menu a:focus,
+#header-desktop .menu .menu-item:focus,
+#header-desktop .menu a:focus,
+.header-wrapper .menu .menu-item:focus,
+.header-wrapper .menu a:focus {
+  color: rgba(255, 255, 255, 0.9) !important;
+  background: transparent !important;
+  outline: none !important;
+  border: none !important;
   box-shadow: none !important;
 }
 
@@ -451,7 +503,7 @@ body {
   color: var(--grit-white);
   background: var(--grit-charcoal) !important;
   margin: 0 !important;
-  padding-top: 70px !important;
+  padding-top: 0 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
   padding-bottom: 0 !important;
