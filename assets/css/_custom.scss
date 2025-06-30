@@ -79,7 +79,7 @@
 }
 
 // Import Google Fonts First
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');\n\n// Import emergency full-width fixes\n@import '_emergency-fullwidth';
 
 // Global Reset for Theme Conflicts
 * {
@@ -90,12 +90,56 @@ html {
   scroll-behavior: smooth;
 }
 
-// Override theme's container restrictions
+// Fix harsh white background - make it dark
+body {
+  background: var(--grit-charcoal) !important;
+}
+
+// Make all pages full width with no white sidebars
+.page, .content, .single {
+  background: var(--grit-charcoal) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+// Fix main wrapper to be full width
+.wrapper {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+// Fix container to be full width
+.container {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+// Make ALL pages full width
 .page {
   max-width: none !important;
   width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
+  background: var(--grit-charcoal) !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+// Override theme main container
+.main {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: var(--grit-charcoal) !important;
 }
 
 // Ensure our home content displays properly
@@ -123,7 +167,11 @@ body {
   font-family: var(--font-body) !important;
   font-size: var(--text-body);
   line-height: var(--line-normal);
-  color: var(--grit-gray-cool);
+  color: var(--grit-white);
+  background: var(--grit-charcoal) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -488,10 +536,36 @@ form label {
   @extend .form-label;
 }
 
-// Section Structure
+// Section Structure - Full width
 .section {
   padding: var(--space-3xl) 0;
   position: relative;
+  width: 100% !important;
+  margin: 0 !important;
+  background: var(--grit-charcoal);
+}
+
+// Force all LoveIt theme containers to be full width
+#content,
+.content,
+.single,
+.page,
+.wrapper,
+.container,
+.main {
+  max-width: none !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: var(--grit-charcoal) !important;
+}
+
+// Inner content should have proper padding
+.inner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  background: transparent;
 }
 
 .section-dark {
