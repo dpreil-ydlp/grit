@@ -2,10 +2,8 @@ baseURL = "https://example.com"
 
 # theme
 # 主题
-theme = "LoveIt"
-# themes directory
-# 主题目录
-themesDir = "../.."
+# Use the parent directory as the theme
+themesDir = "../"
 
 # website title
 # 网站标题
