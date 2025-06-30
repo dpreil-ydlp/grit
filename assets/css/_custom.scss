@@ -271,7 +271,10 @@ html {
   width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  background: var(--grit-charcoal) !important;
+  background: transparent !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 // Ensure our home content displays properly
@@ -280,6 +283,9 @@ html {
   max-width: none !important;
   margin: 0 !important;
   padding: 0 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
   
   // Override any theme styles that might interfere
   .single,
@@ -291,6 +297,9 @@ html {
     padding: 0 !important;
     max-width: none !important;
     width: 100% !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 }
 
@@ -338,22 +347,34 @@ p {
   padding: 2rem 0 !important;
   width: 100% !important;
   margin: 0 !important;
+  position: relative !important;
+  z-index: 1 !important;
 }
 
 .hero-content {
   max-width: 800px !important;
-  color: var(--grit-white) !important;
+  color: #FFFFFF !important;
   text-align: left !important;
   padding: 0 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 10 !important;
+  position: relative !important;
 }
 
 .hero-headline {
   font-size: clamp(2rem, 5vw, 3.5rem) !important;
   font-weight: 700 !important;
-  color: var(--grit-white) !important;
+  color: #FFFFFF !important;
   line-height: 1.2 !important;
   margin-bottom: 1.5rem !important;
-  font-family: var(--font-heading) !important;
+  font-family: 'Space Grotesk', sans-serif !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 10 !important;
+  position: relative !important;
 }
 
 .hero-headline .accent {
@@ -788,6 +809,9 @@ form label {
   padding: 0 2rem !important;
   position: relative !important;
   z-index: 2 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .container-narrow {
