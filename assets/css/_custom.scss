@@ -153,13 +153,15 @@ body > .wrapper {
   transition: all 0.3s ease !important;
   text-decoration: none !important;
   margin: 0 0.25rem !important;
+  background: transparent !important;
 }
 
 .menu .menu-item:hover,
 .menu .menu-item.active {
   color: var(--grit-white) !important;
-  background: rgba(255, 107, 53, 0.2) !important;
+  background: var(--grit-orange) !important;
   transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(255,107,53,0.3) !important;
 }
 
 // Mobile menu styling
@@ -762,11 +764,11 @@ form label {
 // ===============================
 
 .section {
-  padding: 5rem 0 !important;
+  padding: 4rem 0 !important;
   position: relative !important;
   width: 100% !important;
   margin: 0 !important;
-  background: var(--grit-charcoal) !important;
+  background: transparent !important;
   overflow: hidden !important;
 }
 
@@ -795,13 +797,12 @@ form label {
 .single,
 .page,
 .wrapper,
-.container,
 .main {
   max-width: none !important;
   width: 100% !important;
   margin: 0 !important;
   padding: 0 !important;
-  background: var(--grit-charcoal) !important;
+  background: transparent !important;
 }
 
 // Inner content should have proper padding
@@ -854,15 +855,18 @@ form label {
 }
 
 .grid-2 {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
 .grid-3 {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
 .grid-4 {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
 }
 
 // Feature Grid with Icons
@@ -989,8 +993,10 @@ a:hover {
 
 .divider-slash {
   position: relative;
-  margin: var(--space-3xl) 0;
-  height: 4px;
+  margin: 2rem 0;
+  height: 2px;
+  width: 100%;
+  background: transparent;
 }
 
 .divider-slash::before {
@@ -998,10 +1004,11 @@ a:hover {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-50%) skewX(-15deg);
-  width: 100px;
-  height: 4px;
-  background: var(--grit-gradient-primary);
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: var(--grit-orange);
+  opacity: 0.3;
 }
 
 // Home page profile customization
@@ -1171,9 +1178,14 @@ a:hover {
     padding: 0 1rem !important;
   }
   
-  .grid-2, .grid-3, .grid-4 {
+  .grid-2 {
     grid-template-columns: 1fr !important;
-    gap: 1.5rem !important;
+    gap: 1rem !important;
+  }
+  
+  .grid-3, .grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
   }
   
   .feature-grid {
@@ -1197,7 +1209,7 @@ a:hover {
   
   .card {
     padding: 1.5rem !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1rem !important;
   }
   
   .card-icon {
