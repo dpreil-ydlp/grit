@@ -10,6 +10,12 @@ enableGitInfo = false
 enableEmoji = true
 enableRobotsTXT = true
 canonifyURLs = true
+ignoreLogs = ['warning-goldmark-raw-html']
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 # Menu configuration
 [menu]
@@ -174,7 +180,7 @@ canonifyURLs = true
     rss = 10
     # Home page profile
     [params.home.profile]
-      enable = true
+      enable = false
       # Gravatar Email for preferred avatar in home page
       gravatarEmail = ""
       # URL of avatar shown in home page
