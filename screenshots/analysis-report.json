@@ -1,0 +1,192 @@
+{
+  "navigation": {
+    "exists": true,
+    "buttonCount": 5,
+    "buttons": [
+      {
+        "text": "Home",
+        "width": 77.1875,
+        "height": 72,
+        "fontSize": "16px",
+        "padding": "8px 16px",
+        "margin": "0px 4px"
+      },
+      {
+        "text": "Services",
+        "width": 102.640625,
+        "height": 72,
+        "fontSize": "16px",
+        "padding": "8px 16px",
+        "margin": "0px 4px"
+      },
+      {
+        "text": "About",
+        "width": 77.9765625,
+        "height": 72,
+        "fontSize": "16px",
+        "padding": "8px 16px",
+        "margin": "0px 4px"
+      },
+      {
+        "text": "Contact",
+        "width": 95.8125,
+        "height": 72,
+        "fontSize": "16px",
+        "padding": "8px 16px",
+        "margin": "0px 4px"
+      },
+      {
+        "text": "",
+        "width": 32,
+        "height": 16,
+        "fontSize": "16px",
+        "padding": "8px 16px",
+        "margin": "0px 4px"
+      }
+    ],
+    "hasOverflow": false,
+    "styling": {
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "height": "72px",
+      "display": "block",
+      "overflow": "hidden"
+    }
+  },
+  "hero": {
+    "exists": true,
+    "height": 1080,
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "linear-gradient(135deg, rgb(44, 62, 80) 0%, rgb(26, 37, 47) 50%, rgb(44, 62, 80) 100%)",
+    "padding": "0px",
+    "margin": "0px",
+    "textContent": "Stop Drowning in Operations. Start Scaling Your Business.Transform from overwhelmed founder to strategic CEO with the GRIT FrameworkGet Your Growth Roadmap\nFor first-time founders with 2-4 employees r..."
+  },
+  "soundFamiliar": {
+    "exists": true,
+    "height": 6053.1015625,
+    "padding": "0px",
+    "margin": "0px",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "whiteSpace": "normal",
+    "textContent": "\n<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css>{\"@context\":\"http://schema.org\",\"@type\":\"WebSite\",\"url\":\"\\/\",\"inLanguage\":\"en\",\"author\":{\"@type\":\"Perso..."
+  },
+  "layout": {
+    "sectionCount": 10,
+    "sections": [
+      {
+        "index": 0,
+        "height": 6018.1015625,
+        "width": 1920,
+        "margin": "0px",
+        "padding": "0px",
+        "className": "home-content",
+        "tagName": "DIV"
+      },
+      {
+        "index": 1,
+        "height": 425.75,
+        "width": 900,
+        "margin": "0px",
+        "padding": "0px 32px",
+        "className": "hero-content animate-on-scroll fade-up",
+        "tagName": "DIV"
+      },
+      {
+        "index": 2,
+        "height": 1620.875,
+        "width": 1920,
+        "margin": "0px",
+        "padding": "64px 0px",
+        "className": "section section-light",
+        "tagName": "DIV"
+      },
+      {
+        "index": 3,
+        "height": 682.53125,
+        "width": 1920,
+        "margin": "0px",
+        "padding": "64px 0px",
+        "className": "section",
+        "tagName": "DIV"
+      },
+      {
+        "index": 4,
+        "height": 377.578125,
+        "width": 1136,
+        "margin": "48px 0px",
+        "padding": "0px",
+        "className": "feature-grid",
+        "tagName": "DIV"
+      },
+      {
+        "index": 5,
+        "height": 724.28125,
+        "width": 1920,
+        "margin": "0px",
+        "padding": "64px 0px",
+        "className": "section section-accent",
+        "tagName": "DIV"
+      },
+      {
+        "index": 6,
+        "height": 283.171875,
+        "width": 1136,
+        "margin": "48px 0px",
+        "padding": "16px",
+        "className": "grit-framework",
+        "tagName": "DIV"
+      },
+      {
+        "index": 7,
+        "height": 64.15625,
+        "width": 1136,
+        "margin": "64px 0px 0px",
+        "padding": "0px",
+        "className": "",
+        "tagName": "DIV"
+      },
+      {
+        "index": 8,
+        "height": 1308.5078125,
+        "width": 1920,
+        "margin": "0px",
+        "padding": "64px 0px",
+        "className": "section section-dark",
+        "tagName": "DIV"
+      },
+      {
+        "index": 9,
+        "height": 469.90625,
+        "width": 1920,
+        "margin": "0px",
+        "padding": "64px 0px",
+        "className": "section section-accent",
+        "tagName": "DIV"
+      }
+    ],
+    "hasHorizontalScroll": false,
+    "bodyWidth": 1920,
+    "windowWidth": 1920
+  },
+  "mobile": {
+    "navExists": true,
+    "hamburgerExists": true,
+    "navHeight": 0,
+    "isResponsive": true
+  },
+  "performance": {
+    "loadTime": 2160,
+    "domContentLoaded": 1967,
+    "firstPaint": 2092,
+    "firstContentfulPaint": 2092
+  },
+  "consoleErrors": [],
+  "timestamp": "2025-06-30T12:56:33.973Z",
+  "screenshots": [
+    "desktop-full-page.png",
+    "desktop-above-fold.png",
+    "mobile-full-page.png",
+    "mobile-above-fold.png",
+    "tablet-full-page.png"
+  ]
+}
