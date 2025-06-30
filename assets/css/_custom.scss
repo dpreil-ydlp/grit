@@ -81,8 +81,46 @@
 // Import Google Fonts First
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-// Import emergency full-width fixes
-@import '_emergency-fullwidth';
+// EMERGENCY FULL-WIDTH FIXES DIRECTLY HERE
+// Force absolutely everything to be full width
+html, body {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #2C3E50 !important;
+  overflow-x: hidden !important;
+}
+
+// Kill all wrappers and containers
+.wrapper,
+.main,
+.page,
+.content,
+.single,
+.container,
+#content,
+.header-wrapper,
+.footer-container,
+body > div,
+main,
+article {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+// Fix the specific LoveIt theme wrapper
+body > .wrapper {
+  display: none !important;
+}
+
+// Make body direct container
+body > * {
+  max-width: 100% !important;
+  width: 100% !important;
+}
 
 // Global Reset for Theme Conflicts
 * {
@@ -93,37 +131,7 @@ html {
   scroll-behavior: smooth;
 }
 
-// Fix harsh white background - make it dark
-body {
-  background: var(--grit-charcoal) !important;
-}
-
-// Make all pages full width with no white sidebars
-.page, .content, .single {
-  background: var(--grit-charcoal) !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  max-width: none !important;
-  width: 100% !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-}
-
-// Fix main wrapper to be full width
-.wrapper {
-  max-width: none !important;
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-// Fix container to be full width
-.container {
-  max-width: none !important;
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
+// Already handled above
 
 // Make ALL pages full width
 .page {
@@ -917,6 +925,26 @@ a:hover {
     min-height: 70vh;
     text-align: center;
   }
+}
+
+// FINAL AGGRESSIVE OVERRIDE - DARK BACKGROUND EVERYWHERE
+body {
+  background-color: #2C3E50 !important;
+  background: #2C3E50 !important;
+}
+
+html {
+  background-color: #2C3E50 !important;
+  background: #2C3E50 !important;
+}
+
+// Kill any white backgrounds
+* {
+  background-color: transparent !important;
+}
+
+body, html {
+  background-color: #2C3E50 !important;
 }
 
 // Page content styling

@@ -19,16 +19,12 @@
 
         <div id="mask"></div>
 
-        {{- /* Body wrapper */ -}}
-        <div class="wrapper">
-            {{- partial "header.html" . -}}
-            <main class="main" id="main-content" role="main">
-                <div class="container">
-                    {{- block "content" . }}{{ end -}}
-                </div>
-            </main>
-            {{- partial "footer.html" . -}}
-        </div>
+        {{- /* Remove wrapper div for full width */ -}}
+        {{- partial "header.html" . -}}
+        <main class="main" id="main-content" role="main">
+            {{- block "content" . }}{{ end -}}
+        </main>
+        {{- partial "footer.html" . -}}
 
         <div id="fixed-buttons">
             {{- /* top button */ -}}
