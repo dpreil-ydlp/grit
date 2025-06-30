@@ -63,15 +63,15 @@ lightgallery: false
         
         <h3 style="text-align: center; margin-bottom: var(--space-2xl); color: var(--grit-charcoal); font-size: var(--text-h2);">Tell Us About Your Growth Challenge</h3>
         
-        <div class="grid-2">
-          <div class="form-group">
+        <div class="grid-2 stagger-container animate-on-scroll">
+          <div class="form-group form-group-animated">
             <label class="form-label" for="name">Your Name <span style="color: var(--grit-orange);">*</span></label>
-            <input class="form-input" type="text" id="name" name="name" required>
+            <input class="form-input" type="text" id="name" name="name" required placeholder="Enter your full name">
           </div>
           
-          <div class="form-group">
+          <div class="form-group form-group-animated">
             <label class="form-label" for="email">Email <span style="color: var(--grit-orange);">*</span></label>
-            <input class="form-input" type="email" id="email" name="email" required>
+            <input class="form-input" type="email" id="email" name="email" required placeholder="your@email.com">
           </div>
         </div>
         

@@ -42,5 +42,9 @@
 
         {{- /* Load JavaScript scripts and CSS */ -}}
         {{- partial "assets.html" . -}}
+        
+        {{- /* Load Grit Interactions */ -}}
+        <script src="{{ "js/grit-interactions.js" | relURL }}"></script>
+        <script src="{{ "js/grit-loading.js" | relURL }}"></script>
     </body>
 </html>
