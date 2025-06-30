@@ -16,6 +16,20 @@ ignoreLogs = ['warning-goldmark-raw-html']
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+      hardWraps = false
+      xhtml = false
+    [markup.goldmark.parser]
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+      wrapStandAloneImageWithinParagraph = false
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
 
 # Menu configuration
 [menu]
