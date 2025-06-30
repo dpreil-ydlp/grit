@@ -991,6 +991,129 @@ html {
   scroll-behavior: smooth;
 }
 
+// Enhanced Mobile Responsive Optimizations
+@media (max-width: 768px) {
+  // Fix hero section on mobile
+  .hero {
+    padding: var(--space-xl) 0;
+    min-height: auto;
+  }
+  
+  .hero-headline {
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  // Fix button sizes on mobile
+  .btn-primary, .btn-ghost {
+    padding: 12px 24px;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+  
+  // Fix grid layouts on mobile
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-md);
+  }
+  
+  // Fix GRIT Framework on mobile
+  .grit-framework {
+    grid-template-columns: 1fr !important;
+    gap: 2px;
+  }
+  
+  .grit-pillar {
+    padding: var(--space-md);
+  }
+  
+  .grit-letter {
+    font-size: 2rem;
+  }
+  
+  // Fix cards on mobile
+  .card {
+    padding: var(--space-md);
+  }
+  
+  // Fix form on mobile
+  .form-input, .form-select, .form-textarea {
+    font-size: 16px; // Prevents zoom on iOS
+  }
+  
+  // Fix metric cards
+  .metric-card {
+    padding: var(--space-sm);
+  }
+  
+  .metric-number {
+    font-size: 2rem;
+  }
+  
+  // Fix feature grid
+  .feature-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+  
+  // Fix text sizes
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  h4 { font-size: 1.1rem; }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  // Fix container padding
+  .container, .container-narrow {
+    padding: 0 var(--space-sm);
+  }
+  
+  // Fix section padding
+  .section {
+    padding: var(--space-xl) 0;
+  }
+  
+  // Hide decorative elements on mobile
+  .pattern-dots {
+    display: none;
+  }
+  
+  // Fix navigation on mobile
+  .menu-item {
+    font-size: 1rem;
+    padding: var(--space-xs) var(--space-sm);
+  }
+}
+
+// Ultra small devices
+@media (max-width: 375px) {
+  .hero-headline {
+    font-size: 1.75rem !important;
+  }
+  
+  .btn-primary, .btn-ghost {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .metric-number {
+    font-size: 1.5rem;
+  }
+  
+  .grit-letter {
+    font-size: 1.5rem;
+  }
+}
+
 // Table styling (if needed)
 table {
   border-collapse: collapse;
