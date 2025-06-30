@@ -79,7 +79,10 @@
 }
 
 // Import Google Fonts First
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');\n\n// Import emergency full-width fixes\n@import '_emergency-fullwidth';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+// Import emergency full-width fixes
+@import '_emergency-fullwidth';
 
 // Global Reset for Theme Conflicts
 * {
