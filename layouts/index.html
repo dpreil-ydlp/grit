@@ -1,41 +1,30 @@
 {{- define "content" -}}
     {{- $params := .Scratch.Get "params" -}}
-    {{- $profile := .Site.Params.home.profile -}}
-    {{- $posts := .Site.Params.home.posts -}}
 
-    <div class="page home"{{ if ne $posts.enable false }} data-home="posts"{{ end }}>
-        {{- /* Profile */ -}}
-        {{- if ne $profile.enable false -}}
-            {{- partial "home/profile.html" . -}}
-        {{- end -}}
-
-        {{- /* Content */ -}}
-        {{- if .Content -}}
-            <div class="single">
-                <div class="content" id="content">
-                    {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+    {{- /* Custom Homepage Content */ -}}
+    {{- if .Content -}}
+        <div class="home-content">
+            {{- .Content | safeHTML -}}
+        </div>
+    {{- else -}}
+        {{- /* Fallback to default homepage if no content */ -}}
+        <div class="page home">
+            <div class="hero section-dark">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-headline">
+                            Stop Drowning in Operations. <span class="accent">Start Scaling Your Business.</span>
+                        </h1>
+                        <p style="font-size: var(--text-h4); margin-bottom: var(--space-xl); color: rgba(255,255,255,0.9);">
+                            Transform from overwhelmed founder to strategic CEO with the <strong style="color: var(--grit-orange);">GRIT Framework</strong>
+                        </p>
+                        <a href="/contact/" class="btn-primary">
+                            Get Your Growth Roadmap
+                            <span class="arrow-right"></span>
+                        </a>
+                    </div>
                 </div>
             </div>
-        {{- end -}}
-
-        {{- /* Posts */ -}}
-        {{- if ne $posts.enable false | and .Site.RegularPages -}}
-            {{- /* Paginate */ -}}
-            {{- $pages := where .Site.RegularPages "Type" "posts" -}}
-            {{- if .Site.Params.page.hiddenFromHomePage -}}
-                {{- $pages = where $pages "Params.hiddenfromhomepage" false -}}
-            {{- else -}}
-                {{- $pages = where $pages "Params.hiddenfromhomepage" "!=" true -}}
-            {{- end -}}
-            {{- with $posts.paginate | default .Site.Params.paginate -}}
-                {{- $pages = $.Paginate $pages . -}}
-            {{- else -}}
-                {{- $pages = .Paginate $pages -}}
-            {{- end -}}
-            {{- range $pages.Pages -}}
-                {{- .Render "summary" -}}
-            {{- end -}}
-            {{- partial "paginator.html" . -}}
-        {{- end -}}
-    </div>
+        </div>
+    {{- end -}}
 {{- end -}}

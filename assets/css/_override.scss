@@ -1,15 +1,49 @@
 // Override LoveIt theme styles with Grit GrowthOps branding
 
+// Force load our custom styles
+.home-content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  
+  // Remove any conflicting styles from the theme
+  .single,
+  .content {
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    max-width: none;
+    width: 100%;
+  }
+}
+
+// Ensure our design system containers work properly
+.container,
+.container-narrow {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg, 2rem);
+  width: 100%;
+}
+
+.container-narrow {
+  max-width: 800px;
+}
+
 // Header styling
 .header-wrapper {
-  background-color: var(--white);
+  background-color: var(--grit-white, #ffffff);
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   
   .header-title a {
-    color: var(--secondary-color);
+    color: var(--grit-charcoal, #2C3E50);
+    font-family: var(--font-heading, 'Space Grotesk', sans-serif);
+    font-weight: 700;
     
     &:hover {
-      color: var(--primary-color);
+      color: var(--grit-orange, #FF6B35);
     }
   }
 }
@@ -18,16 +52,17 @@
 .menu {
   .menu-item {
     .menu-link {
-      color: var(--text-dark);
+      color: var(--grit-charcoal, #2C3E50);
       font-weight: 500;
+      font-family: var(--font-body, 'Inter', sans-serif);
       
       &:hover {
-        color: var(--primary-color);
+        color: var(--grit-orange, #FF6B35);
       }
     }
     
     &.current .menu-link {
-      color: var(--primary-color);
+      color: var(--grit-orange, #FF6B35);
     }
   }
 }
