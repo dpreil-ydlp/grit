@@ -1,5 +1,8 @@
+{{- /* Skip link for accessibility */ -}}
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 {{- /* Desktop header */ -}}
-<header class="desktop" id="header-desktop">
+<header class="desktop" id="header-desktop" role="banner">
     <div class="header-wrapper">
         <div class="header-title">
             <a href="{{ .Site.Home.RelPermalink }}" title="{{ .Site.Title }}">
@@ -25,7 +28,7 @@
                 {{- end -}}
             </a>
         </div>
-        <div class="menu">
+        <nav class="menu" role="navigation" aria-label="Main navigation">
             <div class="menu-inner">
                 {{- range .Site.Menus.main -}}
                     {{- $url := .URL | relLangURL -}}
@@ -80,7 +83,7 @@
                 </a>
             {{- end -}}
             </div>
-        </div>
+        </nav>
     </div>
 </header>
 

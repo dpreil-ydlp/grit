@@ -3,6 +3,107 @@
 // Brand-specific component styling
 // ==============================
 
+// ========== Navigation Enhancements ========== //
+.header-wrapper {
+  .menu {
+    .menu-item {
+      color: var(--grit-charcoal);
+      font-weight: 500;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      display: inline-block;
+      
+      &:hover {
+        background-color: rgba(255, 107, 53, 0.1);
+        color: var(--grit-primary);
+      }
+      
+      &.active {
+        background-color: var(--grit-primary);
+        color: var(--grit-white);
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Mobile navigation improvements
+#header-mobile .menu .menu-item {
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--grit-charcoal);
+  border-bottom: 1px solid var(--grit-light-gray);
+  
+  &:hover {
+    background-color: rgba(255, 107, 53, 0.05);
+    color: var(--grit-primary);
+  }
+}
+
+// Enhanced button styles
+.btn-primary {
+  background: linear-gradient(135deg, var(--grit-primary), var(--grit-primary-dark));
+  color: var(--grit-white);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+    text-decoration: none;
+    color: var(--grit-white);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  .arrow-right::after {
+    content: "→";
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover .arrow-right::after {
+    transform: translateX(4px);
+  }
+}
+
+// Secondary button style
+.btn-secondary {
+  background: transparent;
+  color: var(--grit-primary);
+  border: 2px solid var(--grit-primary);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: var(--grit-primary);
+    color: var(--grit-white);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+}
+
 // ========== Advanced Form Components ========== //
 // Multi-step form styling
 .form-step {
@@ -358,9 +459,13 @@
 
 // ========== Responsive Design ========== //
 @media (max-width: 768px) {
-  .btn-cta.btn-large {
+  .btn-cta.btn-large,
+  .btn-primary {
     padding: 14px 24px;
     font-size: 1rem;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 1rem;
   }
   
   .feature-grid {
@@ -372,22 +477,107 @@
     padding: 3rem 1.5rem;
   }
   
-  .grit-container {
-    padding: 0 0.75rem;
+  .grit-container,
+  .container,
+  .container-narrow {
+    padding: 0 1rem;
+  }
+  
+  // Mobile text sizing
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+  
+  // Hero section mobile improvements
+  .hero-content {
+    text-align: center;
+    padding: 2rem 0;
+    
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+    
+    p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+  }
+  
+  // Grid adjustments for mobile
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .grit-framework {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  // Card spacing improvements
+  .card {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  // Navigation improvements
+  .header-wrapper .menu .menu-item {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 480px) {
-  .btn-cta {
+  .btn-cta,
+  .btn-primary,
+  .btn-secondary {
     width: 100%;
     margin-bottom: 0.5rem;
+    justify-content: center;
   }
   
-  .feature-card {
-    padding: 1.5rem;
-  }
-  
+  .feature-card,
   .testimonial-card {
     padding: 1.5rem;
+  }
+  
+  // Single column layout for GRIT framework on small screens
+  .grit-framework {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  // Improved spacing for small screens
+  .section {
+    padding: 2rem 0;
+  }
+  
+  .container,
+  .container-narrow {
+    padding: 0 0.75rem;
+  }
+  
+  // Typography adjustments
+  h1 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+  }
+  
+  // Hero adjustments
+  .hero-content p {
+    font-size: 0.95rem;
   }
 }
